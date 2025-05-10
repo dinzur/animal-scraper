@@ -2,6 +2,8 @@
 
 This Python project scrapes the Wikipedia page for animal names and their **collateral adjectives**, downloads an image for each animal, and generates a clean, categorized HTML report.
 
+---
+
 ## 🧠 Features
 
 - Extracts all animals and their collateral adjectives from [Wikipedia](https://en.wikipedia.org/wiki/List_of_animal_names)
@@ -12,20 +14,25 @@ This Python project scrapes the Wikipedia page for animal names and their **coll
 - Clean, modular, production-style code
 - Includes test coverage
 
+---
+
 ## 📁 Project Structure
 
+```
 ├── src/
-│ ├── main.py # Entry point
-│ ├── scraper.py # Wikipedia scraping logic
-│ ├── image_downloader.py # Image download logic
-│ ├── html_generator.py # HTML report generator
-│ ├── utils.py # Shared helpers
+│   ├── main.py               # Entry point
+│   ├── scraper.py            # Wikipedia scraping logic
+│   ├── image_downloader.py   # Image download logic
+│   ├── html_generator.py     # HTML report generator
+│   ├── utils.py              # Shared helpers
 ├── tests/
-│ ├── test_scraper.py
-│ ├── test_image_downloader.py
+│   ├── test_scraper.py
+│   ├── test_image_downloader.py
 ├── requirements.txt
 ├── README.md
+```
 
+---
 
 ## 🚀 How to Run
 
@@ -37,28 +44,42 @@ pip install -r requirements.txt
 python -m src.main
 ```
 
-The report will be saved to: output/report.html
-Images are saved to: /tmp/
+- 📄 The report will be saved to: `output/report.html`  
+- 🖼️ Images are saved to: `/tmp/`
+
+---
 
 ## 🧪 Running Tests
+
 ```bash
 python -m unittest discover -s tests
 ```
 
-## ⏱️ Time Spent
-Total: ~6.5 hours
-Wikipedia parsing: 1.5h
-Image scraping & fallback logic: 3h
-HTML generation: 0.5h
-Threading & concurrency: 0.5h
-Testing & validation: 1h
+---
 
-## 🔍 Future Improvements
-* Retry failed image downloads from log
-* Support alternative image sources (e.g. Wikimedia API)
-* Cache results to avoid re-downloading
-* Add CLI arguments for custom paths or filters
+## ⏱️ Time Spent
+
+| Task                        | Duration |
+|----------------------------|----------|
+| Wikipedia parsing          | 1.5h     |
+| Image scraping & fallback  | 3h       |
+| HTML generation            | 0.5h     |
+| Threading & concurrency    | 0.5h     |
+| Testing & validation       | 1h       |
+| **Total**                  | **~6.5h**|
+
+---
+
+## 🔍 Suggestion for Future Improvements
+
+- [ ] Retry failed image downloads from logs
+- [ ] Support alternative image sources (e.g., Wikimedia API)
+- [ ] Cache results to avoid re-downloading
+- [ ] Add CLI arguments for custom paths or filters
+
+---
 
 ## 🧰 Dependencies
-requests
-beautifulsoup4
+
+- `requests`
+- `beautifulsoup4`
